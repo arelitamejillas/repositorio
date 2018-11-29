@@ -9,8 +9,7 @@
 //  }
 //}
 
-node{
-  
+node{  
   ckeckout scm
   stage('Compilar'){
     echo "Comienza la compilación" 
