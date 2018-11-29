@@ -14,7 +14,7 @@ node{
   stage('Compilar'){
     echo "Comienza la compilación" 
     withMaven(
-      maven:'Maven Test'
+      maven:'Maven por defecto (3.6)'
     ){
       sh 'mvn compile'
     } 
