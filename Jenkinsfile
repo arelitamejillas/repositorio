@@ -11,6 +11,6 @@
 
 node{
   stage('Build'){
-    echo "Hola mundo" 
+    echo "Adios mundo cruel!!" 
   }
 }
