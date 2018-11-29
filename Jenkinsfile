@@ -9,13 +9,16 @@
 //  }
 //}
 
-node
-{
+node{
   
   ckeckout scm
   stage('Compilar'){
     echo "Comienza la compilación" 
-    mvn compile
+    withMaven(
+      maven:'Maven Test'
+    ){
+      sh 'mvn compile'
+    } 
   }
     stage('Tests'){
     echo "Comienza las pruebas!!" 
