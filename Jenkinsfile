@@ -10,7 +10,7 @@
 //}
 
 node{  
-  ckeckout scm
+  checkout scm
   stage('Compilar'){
     echo "Comienza la compilación" 
     withMaven(
