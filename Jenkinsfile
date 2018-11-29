@@ -24,7 +24,7 @@ node{
     withMaven(
       maven:'Maven por defecto (3.6)'
     ){
-      sh 'mvn tests'
+      sh 'mvn test'
     }   
   }
     stage('Empaquetar'){
