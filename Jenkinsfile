@@ -1,15 +1,16 @@
 pipeline{
   agent any
   stages{
-  stage('Compilar'){
-    echo "Comienza la compilación" 
-    withMaven(
-      maven:'Maven por defecto (3.6)'
-    ){
-      sh 'mvn compile'
-    } 
-  }
-    stage('Tests'){
+    stage('Compilar'){
+      echo "Comienza la compilación" 
+      withMaven(
+        maven:'Maven por defecto (3.6)'
+      ){
+        sh 'mvn compile'
+      } 
+   }
+   
+   stage('Tests'){
     echo "Comienza las pruebas!!" 
     withMaven(
       maven:'Maven por defecto (3.6)'
@@ -17,15 +18,18 @@ pipeline{
       sh 'mvn test'
       junit '**/*.xml'
     }   
-  }   
-    stage('Empaquetar'){
+  } 
+    
+  stage('Empaquetar'){
     echo "Comienza la empaquetación!!" 
-   withMaven(
+    withMaven(
       maven:'Maven por defecto (3.6)'
-   ){
-      sh 'mvn package'
+    ){
+        sh 'mvn package'
     }    
-  }
+   }
 }
+}
+
 
 
