@@ -26,7 +26,6 @@ pipeline{
       sh 'mvn package'
     }    
   }
-    sh 'mvn package' 
 }
 
 
